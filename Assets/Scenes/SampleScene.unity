@@ -915,6 +915,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1102765471}
     - target: {fileID: 4335688261588500969, guid: f4059f84facc01244acfcde364ca8963, type: 3}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 8409627420097413531, guid: 46af77702dc0eb042aee24dc78f80c2f, type: 3}
+    - target: {fileID: 4335688261588500969, guid: f4059f84facc01244acfcde364ca8963, type: 3}
       propertyPath: point
       value: 10
       objectReference: {fileID: 0}
@@ -928,11 +932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4335688261588500970, guid: f4059f84facc01244acfcde364ca8963, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.13
+      value: -15.94
       objectReference: {fileID: 0}
     - target: {fileID: 4335688261588500970, guid: f4059f84facc01244acfcde364ca8963, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.48
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 4335688261588500970, guid: f4059f84facc01244acfcde364ca8963, type: 3}
       propertyPath: m_LocalPosition.z
@@ -985,11 +989,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874733608097778341, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.27
+      value: 3.91
       objectReference: {fileID: 0}
     - target: {fileID: 7874733608097778341, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.43
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 7874733608097778341, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1031,6 +1035,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1102765471}
+    - target: {fileID: 7874733608097778361, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 8409627420097413531, guid: 46af77702dc0eb042aee24dc78f80c2f, type: 3}
+    - target: {fileID: 7874733608097778361, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7874733608097778362, guid: e0a8c1852a1cb9349abe2420ae40ec8c, type: 3}
       propertyPath: m_Name
       value: Asteroid

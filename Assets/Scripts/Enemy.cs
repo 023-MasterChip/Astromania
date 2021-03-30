@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     public int point;
     public GameObject ob;
-
+    public ParticleSystem ps;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +42,13 @@ public class Enemy : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            ob.GetComponent<playerFollow>().ScorePoints(point);
-            Destroy(gameObject);
+            Destroy();
         }
+    }
+    void Destroy()
+    {
+        ob.GetComponent<playerFollow>().ScorePoints(point);
+        Instantiate(ps, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

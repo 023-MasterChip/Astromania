@@ -18,6 +18,7 @@ public class asteroid : MonoBehaviour
     public GameObject player;
     public int point;
 
+    public ParticleSystem particle;
 
     // Start is called before the first frame update
     void Start()
@@ -55,8 +56,15 @@ public class asteroid : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            player.GetComponent<playerFollow>().ScorePoints(point);
-            Destroy(gameObject);
+            
+            Destroy();
+            
         }
+    }
+    void Destroy()
+    {
+        player.GetComponent<playerFollow>().ScorePoints(point);
+        Instantiate(particle, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
