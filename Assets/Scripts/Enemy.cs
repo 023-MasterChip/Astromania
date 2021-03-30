@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
+
+    public int point;
+    public GameObject ob;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            ob.GetComponent<playerFollow>().ScorePoints(point);
             Destroy(gameObject);
         }
     }

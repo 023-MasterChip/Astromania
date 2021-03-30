@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class asteroid : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class asteroid : MonoBehaviour
     public float screenTop;
     public float screenBottom;
 
+    public GameObject player;
+    public int point;
 
-    private int count;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,6 @@ public class asteroid : MonoBehaviour
         float torque = Random.Range(-maxTorque, maxTorque);
         rb.AddForce(thrust);
         rb.AddTorque(torque);
-        count = 0;
     }
 
     // Update is called once per frame
@@ -51,11 +53,9 @@ public class asteroid : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
+        if (collision.tag == "Player")
         {
-            Debug.Log("Hit reg");
-            count++;
-            Debug.Log("Count: " + count);
+            player.GetComponent<playerFollow>().ScorePoints(point);
             Destroy(gameObject);
         }
     }
