@@ -56,9 +56,7 @@ public class asteroid : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            
             Destroy();
-            
         }
     }
     void Destroy()

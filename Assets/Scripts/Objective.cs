@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
+    public ParticleSystem particle;
+    public GameObject cam;
     private int health;
     // Start is called before the first frame update
     void Start()
@@ -25,15 +27,20 @@ public class Objective : MonoBehaviour
     {
         if(collision.tag=="Asteroid")
         {
+            cam.GetComponent<screenShake>().TriggerShake();
             Debug.Log("Hit by asteroid");
             health--;
             Debug.Log("Health: " + health);
+            Instantiate(particle, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
         }
         else if(collision.tag == "Enemy")
         {
+            cam.GetComponent<screenShake>().TriggerShake();
             Debug.Log("Hit by Enemy");
             health--;
             Debug.Log("Health: " + health);
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }
