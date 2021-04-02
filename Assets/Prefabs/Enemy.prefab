@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4335688261588500970}
   - component: {fileID: 4335688261588500971}
-  - component: {fileID: 4335688261588500972}
   - component: {fileID: 4335688261588500968}
+  - component: {fileID: 4335688261588500972}
   - component: {fileID: 4335688261588500969}
   m_Layer: 0
   m_Name: Enemy
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4335688261588500973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.36, y: -1.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4335688261588500972
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4335688261588500973}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.73
 --- !u!50 &4335688261588500968
 Rigidbody2D:
   serializedVersion: 4
@@ -122,6 +106,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &4335688261588500972
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335688261588500973}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.73
 --- !u!114 &4335688261588500969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689ef44cb45bb034fa7fd15cdf627e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5317142097819037416, guid: 1e524446de2a2744aae25570dc95195c, type: 3}
   moveSpeed: 5
   point: 10
-  ob: {fileID: 0}
   ps: {fileID: 8409627420097413531, guid: 46af77702dc0eb042aee24dc78f80c2f, type: 3}

@@ -12,12 +12,13 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
 
     public int point;
-    public GameObject ob;  // Objective gameObject
+    private GameObject pl;  // Player gameObject
     public ParticleSystem ps; // Particle system gameObject
 
     // Start is called before the first frame update
     void Start()
     {
+        pl = GameObject.Find("Player");
         rb = this.GetComponent<Rigidbody2D>();
     }
 
@@ -51,7 +52,7 @@ public class Enemy : MonoBehaviour
     // Object destroy and score passing
     void Destroy()
     {
-        ob.GetComponent<playerFollow>().ScorePoints(point);
+        pl.GetComponent<playerFollow>().ScorePoints(point);
         Instantiate(ps, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

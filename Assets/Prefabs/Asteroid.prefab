@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7874733608097778362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.27, y: -0.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,13 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396ac979b1400ec4682cc6691869d564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxThrust: 100
-  maxTorque: 100
+  maxThrust: 300
+  maxTorque: 300
   rb: {fileID: 7874733608097778343}
   screenLeft: -12.2
   screenRight: 12.2
   screenTop: 5.8
   screenBottom: -5.8
-  player: {fileID: 0}
   point: 5
   particle: {fileID: 8409627420097413531, guid: 46af77702dc0eb042aee24dc78f80c2f, type: 3}

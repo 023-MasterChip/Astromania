@@ -18,7 +18,7 @@ public class asteroid : MonoBehaviour
     public float screenTop;
     public float screenBottom;
 
-    public GameObject player;
+    private GameObject Player;
    
     // Score point
     public int point;
@@ -28,7 +28,7 @@ public class asteroid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
+        Player = GameObject.Find("Player");
         Vector2 thrust = new Vector2(Random.Range(-maxThrust, maxThrust), Random.Range(-maxThrust, maxThrust)); // Random range of speed value  
         float torque = Random.Range(-maxTorque, maxTorque); // rotation
         rb.AddForce(thrust);
@@ -71,7 +71,7 @@ public class asteroid : MonoBehaviour
     // Object destroy and score passing
     void Destroy()
     {
-        player.GetComponent<playerFollow>().ScorePoints(point);
+        Player.GetComponent<playerFollow>().ScorePoints(point);
         Instantiate(particle, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
