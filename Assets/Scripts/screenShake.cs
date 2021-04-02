@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Screen Shake script 
+//!!!!!!!!Dont change this script or add anything to it!!!!!!!!!!!!!!!!!!!!
 public class screenShake : MonoBehaviour
 {
     // Transform of the GameObject you want to shake
-    private Transform transform;
+    private Transform initial;
 
     // Desired duration of the shake effect
     private float shakeDuration = 0f;
@@ -44,7 +47,7 @@ public class screenShake : MonoBehaviour
     {
         if (transform == null)
         {
-            transform = GetComponent(typeof(Transform)) as Transform;
+            initial = GetComponent(typeof(Transform)) as Transform;
         }
     }
     void OnEnable()

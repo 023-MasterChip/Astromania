@@ -2,7 +2,16 @@
 Unity project file
 
 
-################################################
+###############################################################################
+
+Asteroid : Object that moves freely in screen space
+Enemy: Object that moves towards the objective
+Player: spaceship
+Objective: Earth
+
+###############################################################################
+
+
 
 ##Player
 	##.player moves around freely

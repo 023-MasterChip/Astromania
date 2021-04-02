@@ -23,8 +23,10 @@ public class Objective : MonoBehaviour
         }
     }
 
+    // Trigger collision check
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Asteroid collision check
         if(collision.tag=="Asteroid")
         {
             cam.GetComponent<screenShake>().TriggerShake();
@@ -34,6 +36,7 @@ public class Objective : MonoBehaviour
             Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
+        // Enemy collision check
         else if(collision.tag == "Enemy")
         {
             cam.GetComponent<screenShake>().TriggerShake();

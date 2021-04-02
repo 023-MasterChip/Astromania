@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public Transform player;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f; // speed value
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
     public int point;
-    public GameObject ob;
-    public ParticleSystem ps;
+    public GameObject ob;  // Objective gameObject
+    public ParticleSystem ps; // Particle system gameObject
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Vector3 direction = player.position - transform.position; // Objective position calculation
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Rotation towards objective
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
+    // trigger collision check
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -45,6 +47,8 @@ public class Enemy : MonoBehaviour
             Destroy();
         }
     }
+
+    // Object destroy and score passing
     void Destroy()
     {
         ob.GetComponent<playerFollow>().ScorePoints(point);

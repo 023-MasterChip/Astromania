@@ -10,19 +10,21 @@ public class playerFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        score = 0;
+        Cursor.visible = false; // Cursor disabled
+        score = 0; // initial score value (!!!Dont change)
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
         transform.position = pos;
     }
+
+    // Adding score 
     public void ScorePoints(int pointToAdd)
     {
-        Debug.Log("Score added");
+        Debug.Log("Score added"); 
         score += pointToAdd;
         scoreText.text = "" + score;
     }
