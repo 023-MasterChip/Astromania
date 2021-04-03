@@ -17,7 +17,6 @@ public class asteroidSpawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawner", spawnDelay, spawnTime);
-        InvokeRepeating("spawner2", spawnDelay, spawnTime);
     }
 
 
