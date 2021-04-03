@@ -6,21 +6,25 @@ public class enemySpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
 
-    public GameObject asteroid;
+    
+    public GameObject enemy;
 
     public float spawnDelay;
     public float spawnTime;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("spawner", spawnDelay, spawnTime);
     }
 
+    
+
     void spawner()
     {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(asteroid, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
+    
 }

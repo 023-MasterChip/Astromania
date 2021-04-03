@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class newSpawner : MonoBehaviour
+public class asteroidSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
 
-    public GameObject enemy;
+
+    public GameObject asteroid;
 
     public float spawnDelay;
     public float spawnTime;
@@ -16,11 +17,15 @@ public class newSpawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawner", spawnDelay, spawnTime);
+        InvokeRepeating("spawner2", spawnDelay, spawnTime);
     }
+
+
 
     void spawner()
     {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Instantiate(asteroid, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
+
 }

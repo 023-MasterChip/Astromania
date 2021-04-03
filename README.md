@@ -40,6 +40,8 @@ Objective: Earth
 ##.Player movement
 ##.Enemy type 1 movement
 ##.Enemy type 2 movement
+##.Asteroid Spawner
+##.Enemy Spawner
 .objective health
 .score
 .highscore
