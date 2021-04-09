@@ -7,6 +7,10 @@ TagManager:
   - Asteroid
   - Objective
   - Enemy
+  - H0
+  - H1
+  - H2
+  - H3
   layers:
   - Default
   - TransparentFX

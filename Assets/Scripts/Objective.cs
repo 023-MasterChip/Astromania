@@ -7,16 +7,32 @@ public class Objective : MonoBehaviour
     public ParticleSystem particle;
     public GameObject cam;
     private int health;
+
+    public GameObject H1;
+    public GameObject H2;
+    public GameObject H3;
     // Start is called before the first frame update
     void Start()
     {
-        health = 5;
+        health = 4;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health == 0)
+        if(health == 3)
+        {
+            Destroy(H3.gameObject);
+        }
+        if (health == 2)
+        {
+            Destroy(H2.gameObject);
+        }
+        if (health == 1)
+        {
+            Destroy(H1.gameObject);
+        }
+        if (health == 0)
         {
             Destroy(gameObject);
             Debug.Log("Game Over");
