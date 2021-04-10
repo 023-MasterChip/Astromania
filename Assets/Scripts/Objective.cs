@@ -11,6 +11,10 @@ public class Objective : MonoBehaviour
     public GameObject H1;
     public GameObject H2;
     public GameObject H3;
+
+    public GameObject E0;
+    public GameObject E1;
+    public GameObject E2;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,19 +27,23 @@ public class Objective : MonoBehaviour
         if(health == 3)
         {
             Destroy(H3.gameObject);
+            Destroy(E0.gameObject);
         }
         if (health == 2)
         {
             Destroy(H2.gameObject);
+            Destroy(E1.gameObject);
         }
         if (health == 1)
         {
             Destroy(H1.gameObject);
+            Destroy(E2.gameObject);
         }
         if (health == 0)
         {
+            FindObjectOfType<Manager>().EndGame();
             Destroy(gameObject);
-            Debug.Log("Game Over");
+            GameObject.Find("Player").GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 

@@ -19,8 +19,6 @@ public class asteroidSpawner : MonoBehaviour
         InvokeRepeating("spawner", spawnDelay, spawnTime);
     }
 
-
-
     void spawner()
     {
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);

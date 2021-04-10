@@ -1,4 +1,5 @@
 using UnityEngine.Audio;
+using System.Collections;
 using System;
 using UnityEngine;
 
@@ -29,8 +30,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(2.0f);
         Play("Theme");
     }
 
