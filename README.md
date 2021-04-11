@@ -42,11 +42,11 @@ Objective: Earth
 ##.Enemy type 2 movement
 ##.Asteroid Spawner
 ##.Enemy Spawner
-.objective health
-.score
-.highscore
-.UI
-.main menu
+##.objective health
+##.score
+##.highscore
+##.UI
+##.main menu
 
 
 
@@ -54,16 +54,16 @@ Objective: Earth
 
 ##.Player sprite
 	##.Tron disk like spaceship with player inside
-.Enemy 1 sprite
+##.Enemy 1 sprite
 	.Asteroid large
-.Enemy 2 sprite
+##.Enemy 2 sprite
 	.Smaller asteroid
 ##.Background sprite
 ##.Objective sprite
-.UI elements
+##.UI elements
 	.health bar
 	.Score
-.Main menu buttons
+##.Main menu buttons
 	.Play
 	.Quit
 
@@ -71,16 +71,16 @@ Objective: Earth
 *******Scenes*******
 
 .Main menu
-	.Play button
-	.Exit
+	##.Play button
+	##.Exit
 	.animated background 
 	.Game name
-.Game scene
-.Game Over scene
-	.Retry
-	.Exit
-	.Highscore display
+##.Game scene
+##.Game Over scene
+	##.Retry
+	##.Exit
+	##.Highscore display
 
 
-saving
+
 
