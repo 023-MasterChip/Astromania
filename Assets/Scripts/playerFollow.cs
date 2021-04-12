@@ -6,14 +6,19 @@ using UnityEngine.UI;
 public class playerFollow : MonoBehaviour
 {
     public int score;
+
     public Text scoreText;
     public Text highscore;
+
+    public Text endScore;
+    public Text endHigh;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false; // Cursor disabled
         score = 0; // initial score value (!!!Dont change)
         highscore.text = PlayerPrefs.GetInt("highscore", 0).ToString();
+        endHigh.text = PlayerPrefs.GetInt("endHigh", 0).ToString();
     }
 
     // Update is called once per frame
@@ -33,8 +38,11 @@ public class playerFollow : MonoBehaviour
         if (score > PlayerPrefs.GetInt("highscore", 0))
         {
             PlayerPrefs.SetInt("highscore", score);
+            PlayerPrefs.SetInt("endHigh", score);
             //nthekyo chyth last ayiii,player prf to store
             highscore.text = score.ToString();
+            endHigh.text = score.ToString();
         }
+        endScore.text = score.ToString();
     }
 }

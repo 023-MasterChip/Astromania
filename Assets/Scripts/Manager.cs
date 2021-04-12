@@ -10,6 +10,12 @@ public class Manager : MonoBehaviour
     void Start()
     {
         GameObject.Find("EndText").GetComponent<Text>().enabled = false;
+        GameObject.Find("endScoretxt").GetComponent<Text>().enabled = false;
+        GameObject.Find("endScore").GetComponent<Text>().enabled = false;
+        GameObject.Find("Highscoretxt").GetComponent<Text>().enabled = false;
+        GameObject.Find("endhigh").GetComponent<Text>().enabled = false;
+        GameObject.Find("Score").GetComponent<Text>().enabled = true;
+        GameObject.Find("highscore").GetComponent<Text>().enabled = true;
     }
     public void EndGame()
     {
@@ -18,6 +24,12 @@ public class Manager : MonoBehaviour
             gameEnd = true;
             Debug.Log("Game Over");
             GameObject.Find("EndText").GetComponent<Text>().enabled = true;
+            GameObject.Find("endScoretxt").GetComponent<Text>().enabled = true;
+            GameObject.Find("endScore").GetComponent<Text>().enabled = true;
+            GameObject.Find("Highscoretxt").GetComponent<Text>().enabled = true;
+            GameObject.Find("endhigh").GetComponent<Text>().enabled = true;
+            GameObject.Find("Score").GetComponent<Text>().enabled = false;
+            GameObject.Find("highscore").GetComponent<Text>().enabled = false;
         }
     }
 
@@ -30,6 +42,7 @@ public class Manager : MonoBehaviour
                 Invoke("Restart", delay);
             }
         }
+        
 
         //if (Input.GetKey(KeyCode.Escape))
         //{
