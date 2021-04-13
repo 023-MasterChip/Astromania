@@ -42,12 +42,13 @@ public class Manager : MonoBehaviour
                 Invoke("Restart", delay);
             }
         }
-        
 
-        //if (Input.GetKey(KeyCode.Escape))
-        //{
-        //    menu();
-        //}
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            menu();
+            Cursor.visible = true;
+        }
     }
 
     void Restart()
